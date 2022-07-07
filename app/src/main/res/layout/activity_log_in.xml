@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="30dp"
+    tools:context=".LogInActivity">
+
+
+    <ImageView
+        android:id="@+id/login_image"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:src="@drawable/ic_background"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Let's you in"
+        android:textSize="30sp"
+        app:layout_constraintTop_toBottomOf="@id/login_image" />
+
+    <com.example.hearmeapp.SocialButton
+        android:id="@+id/fb_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/title_text" />
+
+    <com.example.hearmeapp.SocialButton
+        android:id="@+id/google_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fb_button" />
+
+    <com.example.hearmeapp.SocialButton
+        android:id="@+id/apple_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/google_button" />
+
+    <View
+        android:id="@+id/start_line_image"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#eeeeee"
+        app:layout_constraintBottom_toBottomOf="@id/or_text"
+        app:layout_constraintEnd_toStartOf="@id/or_text"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/or_text" />
+
+    <TextView
+        android:id="@+id/or_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="5dp"
+        android:text="or"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@id/end_line_image"
+        app:layout_constraintStart_toEndOf="@id/start_line_image"
+        app:layout_constraintTop_toBottomOf="@id/apple_button" />
+
+    <View
+        android:id="@+id/end_line_image"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#eeeeee"
+        app:layout_constraintBottom_toBottomOf="@id/or_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/or_text"
+        app:layout_constraintTop_toTopOf="@id/or_text" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/sign_pass_button"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_green_button"
+        android:gravity="center"
+        android:text="Sign in with Password"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/or_text" />
+
+    <TextView
+        android:id="@+id/account1_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Don't have an account?"
+        android:textSize="15sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sign_pass_button" />
+
+    <TextView
+        android:id="@+id/account2_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:text="Sign up"
+        android:textColor="#06c149"
+        android:textSize="15sp"
+        app:layout_constraintStart_toEndOf="@id/account1_text"
+        app:layout_constraintTop_toBottomOf="@id/sign_pass_button" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
